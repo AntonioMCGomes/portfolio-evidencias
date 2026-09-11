@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos — Portal Drummond</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Drummond</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                <li class="nav-item"><a class="nav-link active" href="quem-somos.html">Quem Somos</a></li>
+                <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <section class="container py-5">
+        <h1 class="mb-4">Quem Somos</h1>
+    
+        <p class="lead">
+            O Portal Drummond é um espaço dedicado à celebração da obra de Carlos Drummond de Andrade,
+            um dos maiores poetas da literatura brasileira. O nosso objetivo é aproximar leitores,
+            estudantes e educadores da riqueza literária do autor.
+        </p>
+    
+        <h3 class="mt-4">Missão</h3>
+        <p>
+            Promover o acesso à literatura brasileira, valorizando a poesia, a memória cultural e a educação.
+        </p>
+    
+        <h3 class="mt-4">Visão</h3>
+        <p>
+            Ser uma referência digital no estudo, divulgação e interpretação da obra de Drummond.
+        </p>
+    
+        <h3 class="mt-4">Valores</h3>
+        <ul>
+            <li>Educação e cultura</li>
+            <li>Acesso democrático ao conhecimento</li>
+            <li>Respeito pela arte e pela memória literária</li>
+            <li>Compromisso com a qualidade e autenticidade</li>
+        </ul>
+    </section>
+</main>
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <p class="fw-bold mb-1">Portal Drummond</p>
+    <p class="small mb-0">© 2026 — Todos os direitos reservados</p>
+</footer>
+
+<!-- CHATBOT -->
+<button id="chatbot-btn">💬</button>
+<div id="chatbot-box">
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Escreva aqui...">
+        <button id="chatbot-send">➤</button>
+    </div>
+</div>
+
+<script src="js/chatbot.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

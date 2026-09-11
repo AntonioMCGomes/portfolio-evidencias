@@ -1,0 +1,375 @@
+/* =========================================================
+   PORTAL DRUMMOND — STYLE.CSS (VERSÃO CORRIGIDA)
+   ========================================================= */
+
+/* ------------------------------
+   PALETA DE CORES
+   ------------------------------ */
+:root {
+    --cor-primaria: #1B3A5C;
+    --cor-secundaria: #C9A84C;
+    --cor-fundo: #F8F9FA;
+    --cor-texto: #222222;
+    --sombra-suave: 0 4px 12px rgba(0,0,0,0.15);
+    --sombra-hover: 0 8px 24px rgba(0,0,0,0.25);  /* CORRIGIDO: variável estava em falta */
+    --transicao: 0.3s ease;
+}
+
+/* ------------------------------
+   TIPOGRAFIA GLOBAL
+   ------------------------------ */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;           /* CORRIGIDO: faltava display:flex */
+    flex-direction: column;
+}
+
+main {
+    min-height: 76.7vh;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+/* ------------------------------
+   NAVBAR
+   ------------------------------ */
+.navbar {
+    background-color: var(--cor-primaria) !important;
+}
+
+
+.navbar-brand {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    margin-left: 10px;
+    transition: color var(--transicao);
+}
+
+.nav-link:hover {
+    color: var(--cor-secundaria) !important;
+}
+
+.nav-link:focus {
+    outline: 2px solid var(--cor-secundaria);
+    outline-offset: 2px;
+}
+
+/* ------------------------------
+   CARROSSEL
+   ------------------------------ */
+.carousel-caption h2 {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.carousel-item img {
+    height: 500px; /* ajuste conforme o design */
+    object-fit: cover;
+    width: 100%;
+}
+
+/* ------------------------------
+   CARDS
+   ------------------------------ */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--cor-primaria);
+    box-shadow: var(--sombra-suave);
+    transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.card img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    mix-blend-mode: luminosity;
+    opacity: 0.9;
+    filter: brightness(0.8) contrast(1.2);
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--sombra-hover);
+    background-color: transparent;
+}
+
+.card:hover img {
+    mix-blend-mode: normal;
+    filter: grayscale(0%) brightness(1) contrast(1);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* ------------------------------
+   BOTÕES
+   ------------------------------ */
+.btn-dark {
+    background-color: var(--cor-primaria);
+    border: none;
+    transition: background-color var(--transicao), color var(--transicao);
+}
+
+.btn-dark:hover {
+    background-color: var(--cor-secundaria);
+    color: #000;
+}
+
+.btn-dark:focus {
+    outline: 2px solid var(--cor-secundaria);
+    outline-offset: 2px;
+}
+
+/* ------------------------------
+   FILTRO DE TEMAS
+   ------------------------------ */
+.tema {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.tema.oculto {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
+/* ------------------------------
+   PARALLAX
+   ------------------------------ */
+.parallax {
+    background-image: url('../img/banner.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.parallax h2 {
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+
+/* ------------------------------
+   FORMULÁRIOS
+   ------------------------------ */
+form label {
+    font-weight: 600;
+}
+
+form input,
+form textarea,
+form select {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 100%;
+}
+
+form button {
+    padding: 10px 25px;
+}
+
+/* ------------------------------
+   FOOTER
+   ------------------------------ */
+footer {
+    background-color: var(--cor-primaria);
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color var(--transicao);
+}
+
+footer a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* ------------------------------
+   SLIDESHOW DE CAPAS
+   ------------------------------ */
+.slideshow-container {
+    position: relative;
+    max-width: 500px;
+    max-height: 600px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* CORRIGIDO: regra duplicada removida — só display:none aqui;
+   o JS controla a visibilidade de cada slide */
+.obra-slide {
+    display: none;
+    animation: fade 0.8s ease;
+}
+
+/* CORRIGIDO: seletor era .slide img — não correspondia ao HTML */
+.obra-slide img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+@keyframes fade {
+    from { opacity: 0.4; }
+    to   { opacity: 1; }
+}
+
+.slideshow-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color var(--transicao);
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--cor-primaria);
+}
+
+/* ------------------------------
+   CHATBOT FIXO
+   ------------------------------ */
+#chatbot-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    background: var(--cor-primaria);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: var(--sombra-suave);
+}
+
+#chatbot-box {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 10000;
+    display: none;          /* ocultado por defeito */
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    background: white;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* CORRIGIDO: classe .aberto agora definida — o JS usa classList.toggle("aberto") */
+#chatbot-box.aberto {
+    display: flex;
+}
+
+#chatbot-input-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+#chatbot-input-area input {
+    flex: 1;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+#chatbot-input-area button {
+    background: var(--cor-primaria);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+#chatbot-messages {
+    padding: 10px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.msg-user {
+    background: #d1e7dd;
+    padding: 8px 12px;
+    margin: 6px 0;
+    border-radius: 8px;
+    text-align: right;
+    font-size: 14px;
+}
+
+.msg-bot {
+    background: #f8d7da;
+    padding: 8px 12px;
+    margin: 6px 0;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* ------------------------------
+   RESPONSIVIDADE
+   ------------------------------ */
+@media (max-width: 768px) {
+    .carousel-caption h2 {
+        font-size: 1.2rem;
+    }
+
+    .parallax {
+        height: 250px;
+        background-attachment: scroll;
+    }
+
+    .obra-slide img {
+        height: 260px;
+    }
+}

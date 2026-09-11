@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Drummond — Literatura Brasileira</title>
+
+    <!--favcon-->
+    <link rel="shortcut icon" href="img/drummond-porelemesmo-.avif" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">Drummond</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="quem-somos.html">Quem Somos</a></li>
+                <li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- ========================================== -->
+
+
+<!-- ================= CARROSSEL ================= -->
+<header>
+    <div id="carrossel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <img src="img/banner.jpg" class="d-block w-100" alt="Banner 1">
+                <div class="carousel-caption">
+                    <h2>“No meio do caminho tinha uma pedra.”</h2>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/rosto.png" class="d-block w-100" alt="Banner 2">
+                <div class="carousel-caption">
+                    <h2>A poesia como espelho do mundo</h2>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="img/Carlos-Drummond-de-Andrade-para-criancas-poeta-amigo-da-natureza.webp" class="d-block w-100" alt="Banner 3">
+                <div class="carousel-caption">
+                    <h2>Drummond: ironia, amor e memória</h2>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrossel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carrossel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</header>
+<!-- ========================================== -->
+
+
+<!-- ================= FILTRO DE TEMAS ================= -->
+<section class="container py-5">
+    <h2 class="text-center mb-4">Explore por Temas</h2>
+
+    <div class="text-center mb-3">
+        <button class="btn btn-outline-dark m-1" onclick="filtrar('todos')">Todos</button>
+        <button class="btn btn-outline-dark m-1" onclick="filtrar('amor')">Amor</button>
+        <button class="btn btn-outline-dark m-1" onclick="filtrar('social')">Poesia Social</button>
+        <button class="btn btn-outline-dark m-1" onclick="filtrar('memoria')">Memória</button>
+        <button class="btn btn-outline-dark m-1" onclick="filtrar('cronicas')">Crônicas</button>
+        <button class="btn btn-outline-dark m-1" onclick="filtrar('moderno')">Moderno</button>
+        <button class="btn btn-outline-dark m-1" onclick="filtrar('escola')">Escola</button>
+    </div>
+
+    <div class="row justify-content-center" id="lista-temas">
+
+        <!-- Tema: Poesia Social -->
+        <div class="col-md-4 tema social">
+            <div class="card mb-4">
+                <img src="img/Capa livros/2-fase/a-rosa-do-povo.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5>Poesia Social</h5>
+                    <a href="paginas/poesia-social.html" class="btn btn-dark">Ver mais</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tema: Amor -->
+        <div class="col-md-4 tema amor">
+            <div class="card mb-4">
+                <img src="img/Capa livros/4-fase/a-paixão-medida.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5>Amor e Existência</h5>
+                    <a href="paginas/amor-e-existencia.html" class="btn btn-dark">Ver mais</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tema: Memória -->
+        <div class="col-md-4 tema memoria">
+            <div class="card mb-4">
+                <img src="img/Capa livros/3-fase/boitempo.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5>Memória e Infância</h5>
+                    <a href="paginas/memoria-e-infancia.html" class="btn btn-dark">Ver mais</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tema: Crônicas -->
+        <div class="col-md-4 tema cronicas">
+            <div class="card mb-4">
+                <img src="img/Capa livros/cronicas/cadeira-de-balanco.jpg" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5>Crônicas</h5>
+                    <a href="paginas/cronicas.html" class="btn btn-dark">Ver mais</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tema: Drummond Moderno -->
+        <div class="col-md-4 tema moderno">
+            <div class="card mb-4">
+                <img src="img/Foto1.png" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5>Drummond Moderno</h5>
+                    <a href="paginas/drummond-moderno.html" class="btn btn-dark">Ver mais</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tema: Drummond na Escola -->
+        <div class="col-md-4 tema escola">
+            <div class="card mb-4">
+                <img src="img/Foto2.png" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5>Drummond na Escola</h5>
+                    <a href="paginas/drummond-na-escola.html" class="btn btn-dark">Ver mais</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</section>
+<!-- ========================================== -->
+
+
+<!-- ================= PARALLAX ================= -->
+<section class="parallax d-flex align-items-center justify-content-center">
+    <h2 class="text-white display-5">“A poesia está guardada nas palavras.”</h2>
+</section>
+<!-- ========================================== -->
+
+<section class="container py-5">
+    <h2 class="text-center mb-4">Capas de Obras</h2>
+
+    <div class="slideshow-container">
+
+        <div class="obra-slide">
+            <img src="img/Capa livros/1-fase/brejo-das-almas.jpg" alt="Capa 1">
+        </div>
+
+        <div class="obra-slide">
+            <img src="img/Capa livros/2-fase/jose.jpg" alt="Capa 2">
+        </div>
+
+        <div class="obra-slide">
+            <img src="img/Capa livros/3-fase/claro-enigma.jpg" alt="Capa 3">
+        </div>
+
+    </div>
+
+    <div class="slideshow-dots">
+        <span class="dot" onclick="selecionarSlide(1)"></span>
+        <span class="dot" onclick="selecionarSlide(2)"></span>
+        <span class="dot" onclick="selecionarSlide(3)"></span>
+    </div>
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+        <h5 class="fw-bold mb-1">Portal Drummond</h5>
+        <p class="mb-2">Literatura • Cultura • Educação</p>
+
+        <div class="mb-2">
+            <a href="index.html" class="text-white me-3">Início</a>
+            <a href="quem-somos.html" class="text-white me-3">Quem Somos</a>
+            <a href="servicos.html" class="text-white me-3">Serviços</a>
+            <a href="contactos.html" class="text-white">Contactos</a>
+        </div>
+
+        <p class="small mb-0">© 2026 — Todos os direitos reservados</p>
+    </div>
+</footer>
+<!-- ========================================== -->
+
+
+<!-- ================= CHATBOT ================= -->
+<button id="chatbot-btn">💬</button>
+
+<div id="chatbot-box">
+    <div id="chatbot-messages"></div>
+
+    <div id="chatbot-input-area">
+        <input type="text" id="chatbot-input" placeholder="Escreva aqui...">
+        <button id="chatbot-send">➤</button>
+    </div>
+</div>
+<!-- ========================================== -->
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Scripts do site -->
+<script src="js/filtro.js"></script>
+<script src="js/chatbot.js"></script>
+<script src="js/slideshow.js"></script>
+
+
+</body>
+</html>
